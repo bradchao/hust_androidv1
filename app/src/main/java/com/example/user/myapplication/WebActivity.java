@@ -3,6 +3,7 @@ package com.example.user.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -32,5 +33,15 @@ public class WebActivity extends AppCompatActivity {
         webView.loadUrl(url);
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            if (webView.canGoBack()){
+                webView.goBack();
+            }else{
+                finish();
+            }
+        }
+        return false; //super.onKeyDown(keyCode, event);
+    }
 }

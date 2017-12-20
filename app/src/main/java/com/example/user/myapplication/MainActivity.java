@@ -20,5 +20,11 @@ public class MainActivity extends AppCompatActivity {
                 "my-account/edit-account/");
         startActivity(intent);
     }
+    public void gotoProduct(View view){
+        Intent intent = new Intent(this, WebActivity.class);
+        intent.putExtra("url", hostname +
+                "shop/");
+        startActivity(intent);
+    }
 
 }
