@@ -1,0 +1,8 @@
+我的帳號	/my-account/edit-account/
+我的訂單	/my-account/orders/
+商品	        /shop/
+查看商家	/view-vendor/
+最新消息	/
+關於我們	/about-us/
+
+root_url        https://shop.wangzhengyao.idv.tw
